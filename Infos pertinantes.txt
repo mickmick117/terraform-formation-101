@@ -15,3 +15,11 @@ MODULES
     On semble pouvoir specifier des remote modules dans le terraform registry (a explorer commment ca fonctionne https://www.terraform.io/docs/modules/sources.html#terraform-registry)
     Expliquer comment on peut partager des remote modules dans l'organisation
         Partage de modules communs entre overcast et apricot
+
+Element module 
+    https://www.terraform.io/docs/configuration/modules.html
+    Voir c'est quoi l'utilité
+    Comment ça fonctionne le .result sur le module
+
+Regarder voir ce qu'est un logical provider vs un non logical?
+    Regarder pourquoi on a pas besoin de spécifier le provider 'random'
