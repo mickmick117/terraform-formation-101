@@ -22,3 +22,21 @@ variable "department_tag" {
   default     = "SG"
   description = "The department tag."
 }
+
+variable "resource_prefixes" {
+  type = list(string)
+  default = [
+    "sg",
+    "gravt",
+    "staging",
+    "statuspage"
+  ]
+}
+
+variable "resource_group_prefixes" {
+  type = list(string)
+  default = [
+    "gravt",
+    "staging"
+  ]
+}

@@ -7,6 +7,13 @@ locals {
   }
 }
 
+module "resource_group_name" {
+  source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
+  name     = "reg"
+  prefixes = "${var.resource_group_prefixes}"
+  suffixes = ["${random_string.suffix.result}"]
+}
+
 provider "azurerm" {
   version         = "~>2.0"
   subscription_id = "6edfbbb4-cc4e-4bba-9a8f-361b1696bf0e"
@@ -14,8 +21,26 @@ provider "azurerm" {
   features {}
 }
 
+provider "azurerm" {
+  version         = "~>2.0"
+  subscription_id = "6edfbbb4-cc4e-4bba-9a8f-361b1696bf0e"
+  tenant_id       = "eb39acb7-fae3-4bc3-974c-b765aa1d6355"
+  features {}
+}
+
+resource "random_string" "suffix" {
+  length  = 13
+  upper   = false
+  lower   = true
+  number  = true
+  special = false
+  keepers = {
+    region = var.location
+  }
+}
+
 resource "azurerm_resource_group" "rg" {
-  name     = "reg-ressource-group"
+  name     = "${module.resource_group_name.result}"
   location = var.location
   tags     = local.common_tags
 }
