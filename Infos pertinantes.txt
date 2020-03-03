@@ -1,1 +1,3 @@
-Faire une formation sua coche
+State file
+        Pourquoi c'est bon d'avoir ce fichier la ailleurs (faire remarquer aux gens les infos sensibles dedns)
+        Après, ajouter une étape de pousser le state local vers un remote

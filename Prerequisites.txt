@@ -1,0 +1,3 @@
+- Terraform.exe + env var
+- Editeur de text au choix (vscode)
+- Azure CLI
