@@ -14,8 +14,9 @@ provider "azurerm" {
   features {}
 }
 
+// First step: Specify the name of the ressource group
+// docs: https://www.terraform.io/docs/providers/azurerm/r/resource_group.html
 resource "azurerm_resource_group" "rg" {
-  name     = "reg-ressource-group"
-  location = "Canada East"
-  tags     = "${local.common_tags}"
+  location = var.location
+  tags     = local.common_tags
 }

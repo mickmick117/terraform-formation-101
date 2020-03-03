@@ -1,3 +1,8 @@
+variable "location" {
+  description = "The location where the resources will be provisioned."
+  default     = "Canada East"
+}
+
 variable "environment_tag" {
   default     = "developement"
   description = "The resource environment tag."
