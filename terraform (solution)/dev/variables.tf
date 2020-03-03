@@ -8,7 +8,6 @@ variable "environment_tag" {
   description = "The resource environment tag."
 }
 
-// Change the default value for your email
 variable "resource_owner_tag" {
   default     = "michael.belanger@gsoft.com"
   description = "The resource owner tag."

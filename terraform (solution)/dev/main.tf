@@ -14,9 +14,8 @@ provider "azurerm" {
   features {}
 }
 
-// First step: Specify the name of the ressource group you want to create
-// docs: https://www.terraform.io/docs/providers/azurerm/r/resource_group.html
 resource "azurerm_resource_group" "rg" {
+  name     = "reg-ressource-group"
   location = var.location
   tags     = local.common_tags
 }
