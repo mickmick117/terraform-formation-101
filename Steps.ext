@@ -1,0 +1,5 @@
+1. az login
+2. terraform init
+3. Allez modifier le "owner" dans les variables pour mettre votre adresse.
+4. terraform plan
+5. Ajouter un nom a votre resource group
