@@ -1,2 +1,4 @@
 1 - Providers
-2 - Séparation module/réutilisation
+2 - Sï¿½paration module/rutilisation
+3 - Ressource
+4 - Init/Plan/Apply/Show
