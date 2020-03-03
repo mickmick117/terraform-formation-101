@@ -1,2 +1,7 @@
 1 - Providers
-2 - Séparation module/réutilisation
+2 - SÃ©paration module/rÃ©utilisation
+3 - Resources
+
+
+99 - Voir si on veut montrer comment utiliser le state en remote
+     Il faudrait aussi voir pour l'importer en remote

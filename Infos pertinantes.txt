@@ -1,3 +1,10 @@
 State file
         Pourquoi c'est bon d'avoir ce fichier la ailleurs (faire remarquer aux gens les infos sensibles dedns)
         Après, ajouter une étape de pousser le state local vers un remote
+
+Expliquer comment fonctionne les vars (arguments à fournir au script)
+        Expliquer par la suite que le fichier .auto.tfvars feed automatiquement une valeurs pour les vars
+
+Azurerm store le sate en remote dans un blob storage
+
+Voir s'il y a moyen de partager le fichier de définition des variables en plusieurs scripts TF
