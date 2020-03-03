@@ -15,12 +15,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-ressource-group"
+  name     = "reg-ressource-group"
   location = "Canada East"
-  tags = {
-    environment = "developement"
-    owner       = "michael.belanger@gsoft.com"
-    costCenter  = "SHAREGATE"
-    department  = "SG"
-  }
+  tags     = "${local.common_tags}"
 }
