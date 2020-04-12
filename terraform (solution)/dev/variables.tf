@@ -9,7 +9,7 @@ variable "environment_tag" {
 }
 
 variable "resource_owner_tag" {
-  default     = "michael.belanger@gsoft.com"
+  default     = "guillaume.caya@gsoft.com"
   description = "The resource owner tag."
 }
 
@@ -28,8 +28,8 @@ variable "resource_prefixes" {
   default = [
     "sg",
     "gravt",
-    "staging",
-    "statuspage"
+    "dev",
+    "formation"
   ]
 }
 
@@ -37,6 +37,6 @@ variable "resource_group_prefixes" {
   type = list(string)
   default = [
     "gravt",
-    "staging"
+    "dev"
   ]
 }

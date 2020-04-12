@@ -9,7 +9,7 @@ locals {
 
 provider "azurerm" {
   version         = "~>2.0"
-  subscription_id = "6edfbbb4-cc4e-4bba-9a8f-361b1696bf0e"
+  subscription_id = "5d198d00-f97f-4598-af26-d3e2853d8229"
   tenant_id       = "eb39acb7-fae3-4bc3-974c-b765aa1d6355"
   features {}
 }
