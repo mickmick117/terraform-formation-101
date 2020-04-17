@@ -27,7 +27,7 @@ TODO : Insert picture here
 
 ## Étape 3
 
-- Ajouter un module storage-account qui va permettre de créer, well you guessed it, un storage account
+- Ajouter un module storage-ressources qui va permettre de créer, well you guessed it, un storage account
 - Vous pouvez vous référez à l'exemple suivant https://www.terraform.io/docs/providers/azurerm/r/storage_account.html
 - Contrairement à l'exemple, on veut recevoir nos valeurs en variables d'entrée
 
