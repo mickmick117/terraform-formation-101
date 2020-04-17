@@ -13,32 +13,14 @@ provider "azurerm" {
   features {}
 }
 
-resource "random_string" "suffix" {
-  length  = 13
-  upper   = false
-  lower   = true
-  number  = true
-  special = false
-  keepers = {
-    region = var.location
-  }
-}
-
 resource "azurerm_resource_group" "rg" {
-  name     = module.resource_group_name.result
+  name     = "caya"
   location = var.location
   tags     = local.common_tags
 }
 
-module "resource_group_name" {
-  source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
-  name     = "caya"
-  prefixes = var.resource_group_prefixes
-  suffixes = [random_string.suffix.result]
-}
-
 module "storage_account" {
-  source = "./modules/storage-account"
+  source = "./modules/storage-resources"
 
   name                    = "storage0account0caya"
   resource_group_name     = azurerm_resource_group.rg.name
@@ -53,6 +35,8 @@ module "function_app" {
   resource_group_name               = azurerm_resource_group.rg.name
   resource_group_location           = azurerm_resource_group.rg.location
   storage_account_connection_string = module.storage_account.connection_string
+  nodes                             = 2
+  tags                              = local.common_tags
 }
 
 
