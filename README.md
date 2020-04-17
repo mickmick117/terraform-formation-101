@@ -4,6 +4,7 @@
 
 - Installer azure cli https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest
 - Installer terraform https://www.terraform.io/downloads.html
+- Cloner le projet
 
 ## Étape 1
 
