@@ -69,6 +69,9 @@ variable "resource_group_location" {
 variable "storage_account_connection_string" {
   type = string
 }
+
+variable "tags" {
+}
 ```
 
 main.tf
@@ -78,6 +81,7 @@ resource "azurerm_app_service_plan" "svc_plan" {
   location            = var.resource_group_location
   resource_group_name = var.resource_group_name
   kind                = "FunctionApp"
+  tags                = var.tags
 
   sku {
     tier = "Dynamic"
@@ -91,5 +95,6 @@ resource "azurerm_function_app" "fct_app" {
   resource_group_name       = var.resource_group_location
   app_service_plan_id       = azurerm_app_service_plan.svc_plan.id
   storage_connection_string = var.storage_account_connection_string
+  tags                      = var.tags
 }
 ```
