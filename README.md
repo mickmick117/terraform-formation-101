@@ -7,10 +7,11 @@
 
 ## Étape 1
 
-- En cmd aller dans terraform-formation-101/exercice
+- En cmd faite az login
+- Toujours en command line allez dans le working directory de l'exercice
 - Effectuez un terraform init (si ça fonctionne pas, c'est pas normal)
 - Effectuez un terraform plan
-- Corrigez les erreurs dans la console
+- Vérifiez s'il y a des erreurs et corrigez les au besoin
 - À la fin vous devriez avoir un "resource group" dans Azure portal qui ressemble à ça, mais avec votre nom dans la subscription gsoft-training-dev
   https://portal.azure.com/#@gsoft-group.com/resource/subscriptions/5d198d00-f97f-4598-af26-d3e2853d8229/resourceGroups
 
