@@ -43,6 +43,7 @@ module "storage_account" {
   name                    = "storage0account0caya"
   resource_group_name     = azurerm_resource_group.rg.name
   resource_group_location = azurerm_resource_group.rg.location
+  tags                    = local.common_tags
 }
 
 module "function_app" {

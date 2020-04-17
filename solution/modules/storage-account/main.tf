@@ -5,4 +5,5 @@ resource "azurerm_storage_account" "stg_acc" {
   location                 = var.resource_group_location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  tags                     = var.tags
 }

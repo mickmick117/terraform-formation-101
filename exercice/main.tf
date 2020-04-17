@@ -32,7 +32,6 @@ resource "azurerm_resource_group" "rg" {
 
 module "resource_group_name" {
   source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
-  name     = "caya"
   prefixes = var.resource_group_prefixes
   suffixes = [random_string.suffix.result]
 }
