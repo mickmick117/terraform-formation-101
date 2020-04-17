@@ -52,6 +52,8 @@
 - Faire un "terraform plan" et corrigez vos erreurs s'il y en a
 - Effectuez un "terraform apply" lorsque tout est beau
 
+variables.tf
+
 ```
 variable "name" {
   type = string
@@ -70,6 +72,7 @@ variable "storage_account_connection_string" {
 }
 ```
 
+main.tf
 ```
 resource "azurerm_app_service_plan" "svc_plan" {
   name                = "azure-functions-test-service-plan"
