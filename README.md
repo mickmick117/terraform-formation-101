@@ -48,7 +48,8 @@
 ## Étape 6
 
 - Maintenant on va ajouter un autre mondule function-app avec le code fourni plus bas
-- Ce module va avoir besoin de la connection string du module de storage account
+- Instanciez ce module dans votre working directory (dans le main.tf du root module où est-ce que vous avez instancié le module précédent)
+- Ce module va avoir besoin de la connection string du module de storage ressources
 - Faire un "terraform plan" et corrigez vos erreurs s'il y en a
 - Effectuez un "terraform apply" lorsque tout est beau
 
