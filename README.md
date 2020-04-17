@@ -15,7 +15,7 @@
 - À la fin vous devriez avoir un "resource group" dans Azure portal qui ressemble à ça, mais avec votre nom dans la subscription gsoft-training-dev
   https://portal.azure.com/#@gsoft-group.com/resource/subscriptions/5d198d00-f97f-4598-af26-d3e2853d8229/resourceGroups
 
-TODO : Insert picture here
+![rg](https://github.com/mickmick117/terraform-formation-101/raw/master/rg.png)
 
 ## Étape 2
 
@@ -44,3 +44,46 @@ TODO : Insert picture here
 - On va donc ajouter une valeur de output au module storage-account qui va nous retourner la primary_connection_string
 
 ## Étape 6
+
+- Maintenant on va ajouter un autre mondule function-app avec le code fourni plus bas
+- Ce module va avoir besoin de la connection string du module de storage account
+
+```JSON
+variable "name" {
+  type = string
+}
+
+variable "resource_group_name" {
+  type = string
+}
+
+variable "resource_group_location" {
+  type = string
+}
+
+variable "storage_account_connection_string" {
+  type = string
+}
+```
+
+```JSON
+resource "azurerm_app_service_plan" "svc_plan" {
+  name                = "azure-functions-test-service-plan"
+  location            = var.resource_group_location
+  resource_group_name = var.resource_group_name
+  kind                = "FunctionApp"
+
+  sku {
+    tier = "Dynamic"
+    size = "Y1"
+  }
+}
+
+resource "azurerm_function_app" "fct_app" {
+  name                      = var.name
+  location                  = var.resource_group_location
+  resource_group_name       = var.resource_group_location
+  app_service_plan_id       = azurerm_app_service_plan.svc_plan.id
+  storage_connection_string = var.storage_account_connection_string
+}
+```

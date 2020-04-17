@@ -13,4 +13,3 @@ variable "resource_group_location" {
 variable "storage_account_connection_string" {
   type = string
 }
-

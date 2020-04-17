@@ -24,14 +24,14 @@ resource "random_string" "suffix" {
   }
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = module.resource_group_name.result
-  location = var.location
-  tags     = local.common_tags
-}
-
 module "resource_group_name" {
   source   = "gsoft-inc/naming/azurerm//modules/general/resource_group"
   prefixes = var.resource_group_prefixes
   suffixes = [random_string.suffix.result]
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = module.resource_group_name.result
+  location = var.location
+  tags     = local.common_tags
 }
