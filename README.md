@@ -92,7 +92,7 @@ resource "azurerm_app_service_plan" "svc_plan" {
 resource "azurerm_function_app" "fct_app" {
   name                      = var.name
   location                  = var.resource_group_location
-  resource_group_name       = var.resource_group_location
+  resource_group_name       = var.resource_group_name
   app_service_plan_id       = azurerm_app_service_plan.svc_plan.id
   storage_connection_string = var.storage_account_connection_string
   tags                      = var.tags
