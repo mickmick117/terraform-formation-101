@@ -31,7 +31,7 @@
 - Ajouter un module storage-resources qui va permettre de créer, well you guessed it, un storage account (créer un main.tf et variables.tf dans /module)
 - Vous pouvez vous référez à l'exemple suivant https://www.terraform.io/docs/providers/azurerm/r/storage_account.html
 - Attention ! Vous avez déjà créé un resource group, on veut recevoir nos valeurs en variables d'entrée
-- Paramaitriser "name", "resource_group_name", "location" et tags
+- Parametriser "name", "resource_group_name", "location" et tags
 - Là c'est bien beau, on a un module pour créer des storage account, il faudrait donc l'utiliser
 - Créer un storage account au même endroit où vous avez créer votre resource group
 - Fait des "terraform plan" de temps en temps pour valider s'il y a des erreurs
