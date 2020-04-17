@@ -49,8 +49,10 @@
 
 - Maintenant on va ajouter un autre mondule function-app avec le code fourni plus bas
 - Ce module va avoir besoin de la connection string du module de storage account
+- Faire un "terraform plan" et corrigez vos erreurs s'il y en a
+- Effectuez un "terraform apply" lorsque tout est beau
 
-```JSON
+```
 variable "name" {
   type = string
 }
@@ -68,7 +70,7 @@ variable "storage_account_connection_string" {
 }
 ```
 
-```JSON
+```
 resource "azurerm_app_service_plan" "svc_plan" {
   name                = "azure-functions-test-service-plan"
   location            = var.resource_group_location
